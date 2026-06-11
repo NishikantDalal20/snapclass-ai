@@ -1,0 +1,86 @@
+# Utilities
+numpy
+pandas
+
+# FACE recognition
+scikit-learn
+dlib-bin  # OR use =>dlib-19.24.1-cp311-cp311-win_amd64.whl
+
+git+https://github.com/ageitgey/face_recognition_models
+setuptools<70.0.0
+
+supabase
+bcrypt
+
+segno # url => QR code
+pillow # helps in image import and preprocessing
+
+streamlit
+
+
+
+
+
+
+
+
+# =========================
+# DATA SCIENCE UTILITIES
+# =========================
+
+#numpy
+# Core library for numerical computing (arrays, math operations, fast computations)
+
+#pandas
+# Used for data handling and analysis (tables, CSV files, datasets)
+
+# =========================
+# MACHINE LEARNING / FACE RECOGNITION
+# =========================
+
+#scikit-learn
+# Machine learning library (classification, clustering, model training)
+
+#dlib-bin
+# Core library for face detection and facial landmark detection (used in face_recognition)
+
+# OR manually install specific wheel if needed:
+# dlib-19.24.1-cp311-cp311-win_amd64.whl
+# (Used when pip installation fails on Windows)
+
+#git+https://github.com/ageitgey/face_recognition_models
+# Pretrained face recognition models (encodings for face detection system)
+
+#setuptools<70.0.0
+# Helps manage packaging tools; version pinned to avoid compatibility issues with dlib/face_recognition
+
+# =========================
+# BACKEND / DATABASE
+# =========================
+
+#supabase
+# Cloud database (PostgreSQL backend + auth + storage services)
+
+#bcrypt
+# Used for password hashing and security (secure login system)
+
+# =========================
+# QR CODE GENERATION
+# =========================
+
+#segno
+# Generates QR codes (used for QR-based attendance system)
+
+# =========================
+# IMAGE PROCESSING
+# =========================
+
+#pillow
+# Image processing library (open, resize, convert images for face recognition)
+
+# =========================
+# WEB APP FRAMEWORK
+# =========================
+
+#streamlit
+# Used to build interactive web apps quickly (UI for attendance system)
