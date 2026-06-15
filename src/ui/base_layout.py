@@ -29,10 +29,10 @@ def style_background_dashboard():
 def style_base_layout():
     st.markdown("""
         <style>
-           /* @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Outfit:wght@100..900&display=swap');*/
+            @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Outfit:wght@100..900&display=swap');
             
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+            /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
             /* Hide Top tool bar of streamlit */   
                 
             #MainMenu, footer, header {
@@ -47,22 +47,22 @@ def style_base_layout():
 
             h1{
                 
-                /*font-family: 'Climate Crisis', sans-serif !important; */
-                font-family: 'Poppins', sans-serif !important;
+                font-family: 'Climate Crisis', sans-serif !important; 
+                /*font-family: 'Poppins', sans-serif !important;*/
                 font-size: 3.5rem !important;
                 line-height:1.1 !important;*/
             } 
                    
             h2{
-                /*font-family: 'Climate Crisis', sans-serif !important;*/
-                font-family: 'Poppins', sans-serif !important;
+                font-family: 'Climate Crisis', sans-serif !important;
+                /*font-family: 'Poppins', sans-serif !important;*/
                 font-size: 2rem !important;
                 line-height:0.9 !important;
             }    
 
             h3, h4, p{
-                /*font-family: 'Outfit', sans-serif;*/
-                font-family: 'Poppins', sans-serif !important;
+                font-family: 'Outfit', sans-serif;
+                /*font-family: 'Poppins', sans-serif !important;*/
                 font-weight: 400;
             }
                 
