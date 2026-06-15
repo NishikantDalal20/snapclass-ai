@@ -32,7 +32,7 @@ def style_base_layout():
             @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Outfit:wght@100..900&display=swap');
             
-            /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+            
             /* Hide Top tool bar of streamlit */   
                 
             #MainMenu, footer, header {
@@ -46,30 +46,28 @@ def style_base_layout():
             }
 
             h1{
-                
                 font-family: 'Climate Crisis', sans-serif !important; 
-                /*font-family: 'Poppins', sans-serif !important;*/
                 font-size: 3.5rem !important;
-                line-height:1.1 !important;*/
+                line-height:1.1 !important;
+                margin-bottom:0rem !important;
             } 
                    
             h2{
                 font-family: 'Climate Crisis', sans-serif !important;
-                /*font-family: 'Poppins', sans-serif !important;*/
                 font-size: 2rem !important;
                 line-height:0.9 !important;
+                margin-bottom:0rem !important;
             }    
 
             h3, h4, p{
                 font-family: 'Outfit', sans-serif;
-                /*font-family: 'Poppins', sans-serif !important;*/
-                font-weight: 400;
             }
                 
             button{
                 border-radius: 1.5rem !important;
                 background-color: #5865F2 !important;
                 color: white !important;
+                padding: 10px 20px !important;
                 border: none !important;
                 transition: transform 0.25s ease-in-out !important;
             }
