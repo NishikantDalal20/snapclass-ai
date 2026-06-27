@@ -106,6 +106,69 @@ def style_base_layout():
 
             button:hover{
                 transform :scale(1.05)}
+
+
+           /* Always show audio toolbar */
+            [data-testid="stAudioInput"] .stElementToolbar {
+                opacity: 1 !important;
+                visibility: visible !important;
+                display: flex !important;
+                position: absolute !important;
+                top: 8px !important;
+                right: 8px !important;
+                z-index: 999 !important;
+            }
+
+            /* Download button */
+            [data-testid="stAudioInput"] .stElementToolbar [data-testid="stElementToolbarButton"]:first-child button {
+                background-color: #5865F2 !important;
+                color: white !important;
+                border-radius: 8px !important;
+                padding: 6px !important;
+                width: 32px !important;
+                height: 32px !important;
+                transform: none !important;
+                transition: background-color 0.2s ease !important;
+            }
+
+            [data-testid="stAudioInput"] .stElementToolbar [data-testid="stElementToolbarButton"]:first-child button:hover {
+                background-color: #4752c4 !important;
+                transform: none !important;
+            }
+
+            [data-testid="stAudioInput"] .stElementToolbar [data-testid="stElementToolbarButton"]:first-child button svg {
+                fill: white !important;
+                width: 16px !important;
+                height: 16px !important;
+            }
+
+            /* Delete button */
+            [data-testid="stAudioInput"] .stElementToolbar [data-testid="stElementToolbarButton"]:last-child button {
+                background-color: #ff4b4b !important;
+                color: white !important;
+                border-radius: 8px !important;
+                padding: 6px !important;
+                width: 32px !important;
+                height: 32px !important;
+                transform: none !important;
+                transition: background-color 0.2s ease !important;
+            }
+
+            [data-testid="stAudioInput"] .stElementToolbar [data-testid="stElementToolbarButton"]:last-child button:hover {
+                background-color: #cc0000 !important;
+                transform: none !important;
+            }
+
+            [data-testid="stAudioInput"] .stElementToolbar [data-testid="stElementToolbarButton"]:last-child button svg {
+                fill: white !important;
+                width: 16px !important;
+                height: 16px !important;
+            }
+
+            /* Make audio container relative for positioning */
+            [data-testid="stAudioInput"] .e1ywdc2n1 {
+                position: relative !important;
+            }
         </style>  
 
                 """

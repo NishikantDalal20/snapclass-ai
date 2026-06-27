@@ -9,7 +9,7 @@ from PIL import Image
 import numpy as np
 
 from src.pipelines.face_pypline import predict_attendance, get_face_embeddings, train_classifier
-#from src.pipelines.voice_pypline import get_voice_embedding
+from src.pipelines.voice_pypline import get_voice_embedding
 from src.database.db import get_all_students, create_student, get_student_attendance, get_student_subjects, unenroll_student_to_subject
 from src.components.dialog_enroll import enroll_dialog
 from src.components.subject_card import subject_card
@@ -71,7 +71,7 @@ def student_dashboard():
         def unenroll_button():
                 if st.button("Unenroll from tihs course", type='tertiary', width='stretch', icon=':material/delete_forever:',  key=f"unenroll_{sid}"):
                     unenroll_student_to_subject(student_id, sid)
-                    st.toast(f'Unenrolled from {sub['name']} successfully!')
+                    st.toast(f"Unenrolled from {sub['name']} successfully!")
                     st.rerun()
 
         with cols[i % 2]:
@@ -133,7 +133,7 @@ def student_screen():
                         st.session_state.is_logged_in = True
                         st.session_state.user_role = 'student'
                         st.session_state.student_data = student
-                        st.toast(f'Welcome Back {student['name']}')
+                        st.toast(f"Welcome Back {student['name']}")
                         time.sleep(1)
                         st.rerun()
                 else:
@@ -145,15 +145,15 @@ def student_screen():
             st.header('Register new profile')
             new_name = st.text_input("Enter your name", placeholder='E.g. Nishikant Dalal')
 
-            # st.subheader('Optional : Voice Enrollment')
-            # st.info("Enroll you for voice only attendance")
+            st.subheader('Optional : Voice Enrollment')
+            st.info("Enroll you for voice only attendance")
 
-            # audio_data = None
+            audio_data = None
 
-            # try:
-            #     audio_data = st.audio_input('Record a short phrase like I am present, My name is Nishikant.')
-            # except Exception:
-            #     st.error('Audoio Data failed!')
+            try:
+                audio_data = st.audio_input('Record a short phrase like I am present, My name is Nishikant.')
+            except Exception:
+                st.error('Audoio Data failed!')
 
             if st.button('Create Account', type='primary'):
                 if new_name:
@@ -163,18 +163,18 @@ def student_screen():
                         if encodings:
                             face_emb = encodings[0].tolist()
 
-                            # voice_emb = None
-                            # if audio_data:
-                            #     voice_emb = get_voice_embedding(audio_data.read())
+                            voice_emb = None
+                            if audio_data:
+                                voice_emb = get_voice_embedding(audio_data.read())
 
-                            response_data = create_student(new_name, face_embedding=face_emb, voice_embedding=None)
+                            response_data = create_student(new_name, face_embedding=face_emb, voice_embedding=voice_emb)
 
                             if response_data:
                                 train_classifier()
                                 st.session_state.is_logged_in = True
                                 st.session_state.user_role = 'student'
                                 st.session_state.student_data = response_data[0]
-                                st.toast(f'Profile Created Successfully! Hello {new_name}')
+                                st.toast(f"Profile Created Successfully! Hello {new_name}")
                                 time.sleep(1)
                                 st.rerun()
                         else:

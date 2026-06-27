@@ -22,7 +22,7 @@ import pandas as pd
 from src.database.config import supabase
 
 
-#from src.components.dialog_voice_attendance import voice_attendance_dialog
+from src.components.dialog_voice_attendance import voice_attendance_dialog
 
 from src.database.db import get_attendance_for_teacher
 
@@ -184,9 +184,9 @@ def teacher_tab_take_attendance():
 
                     attendance_result_dialog(pd.DataFrame(results), attendance_to_log)
 
-    # with c3:
-    #     if st.button('Use Voice Attendance', type='primary', width='stretch', icon=':material/mic:'):
-    #         voice_attendance_dialog(selected_subject_id)
+    with c3:
+        if st.button('Use Voice Attendance', type='primary', width='stretch', icon=':material/mic:'):
+            voice_attendance_dialog(selected_subject_id)
 
 
 
